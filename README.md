@@ -91,6 +91,37 @@ The project follows an experimental pipeline:
 
 ---
 
+## Results (ResNet18 Baseline)
+
+The following results correspond to a baseline model trained using ResNet18 as backbone.
+
+### ROC-AUC Comparison
+
+![ROC-AUC](results/roc_auc.png)
+
+### Equal Error Rate (EER)
+
+![EER](results/eer.png)
+
+### Rank-1 Accuracy
+
+![Rank-1](results/rank1.png)
+
+---
+
+### Summary
+
+- Strong performance in intra-dataset scenarios (e.g., AMI → AMI)
+- Noticeable performance drop in cross-dataset evaluations
+- Indicates challenges in generalization across different data distributions and age groups
+
+---
+
+### Key Insight
+
+The model performs well when trained and evaluated on similar distributions, but its performance degrades when applied to different datasets. This highlights the difficulty of cross-age and cross-domain generalization in biometric systems.
+
+
 ## Setup
 
 Install dependencies:
