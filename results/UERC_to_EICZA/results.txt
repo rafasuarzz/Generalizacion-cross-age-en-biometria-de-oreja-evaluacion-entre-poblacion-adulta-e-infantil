@@ -1,0 +1,5 @@
+Train datasets: ['UERC']
+Test datasets: ['EICZA']
+ROC-AUC: 0.66161
+EER: 0.389
+Rank-1: 0.434819

@@ -1,0 +1,5 @@
+Train datasets: ['AMI']
+Test datasets: ['AMI']
+ROC-AUC: 0.965896
+EER: 0.099667
+Rank-1: 0.861429

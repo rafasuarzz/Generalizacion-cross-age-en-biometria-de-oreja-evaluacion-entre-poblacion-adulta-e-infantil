@@ -1,0 +1,5 @@
+Train datasets: ['AMI', 'BIPLab']
+Test datasets: ['UERC']
+ROC-AUC: 0.605456
+EER: 0.425333
+Rank-1: 0.200955
