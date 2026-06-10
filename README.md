@@ -83,6 +83,14 @@ Entorno de ejecución > Cambiar tipo de entorno de ejecución > GPU
 
 También se puede ejecutar el notebook completo, aunque el tiempo de ejecución será mayor.
 
+## Ejecución en Google Colab
+
+El notebook está diseñado para ser completamente funcional por sí solo en Google Colab. Para reproducir el proyecto no es necesario preparar manualmente los datos antes de la ejecución, ya que las primeras celdas se encargan de descargar el archivo comprimido con los datos necesarios, descomprimirlo y generar la estructura de carpetas utilizada por el resto del código.
+
+Por este motivo, la forma recomendada de ejecutar el proyecto es abrir el notebook `codigo_TFG_Rafael_Suárez.ipynb` en Google Colab, activar la GPU y ejecutar las celdas en orden. El propio notebook incluye las fases de descarga, preparación de datos, preprocesado, entrenamiento, evaluación y generación de resultados.
+
+La estructura de datos mostrada en este README corresponde a la organización que se obtiene después de ejecutar las primeras celdas del notebook.
+
 ## Configuración de experimentos
 
 Cada bloque experimental incluye una sección de configuración con parámetros como:
@@ -104,29 +112,18 @@ Modificando estos valores se pueden lanzar distintos experimentos sin cambiar el
 
 ## Resultados generados
 
-Los resultados se almacenan en la carpeta:
-
-```text
-runs/
-```
-
-Dentro de esta carpeta se guardan, según el experimento ejecutado:
+Durante la ejecución del notebook, los resultados de cada experimento se almacenan en la carpeta `runs/`. Dentro de esta carpeta se guardan, según el experimento ejecutado:
 
 - Modelos entrenados en formato `.pt`.
-- Métricas de entrenamiento y validación.
-- Métricas de test.
+- Métricas de entrenamiento, validación y test.
 - Puntos de las curvas ROC.
 - Curvas CMC.
 - Gráficas comparativas.
 - Archivos CSV con resultados individuales y comparativos.
 
-Además, el archivo:
+Además, el archivo `all_experiments_results.csv` recoge un resumen global de los experimentos realizados, incluyendo métricas como ROC-AUC, EER, Rank-1 y Rank-5.
 
-```text
-all_experiments_results.csv
-```
-
-recoge un resumen global de los experimentos realizados, incluyendo métricas como ROC-AUC, EER, Rank-1 y Rank-5.
+En este repositorio se incluye también la carpeta `results/`, donde se muestran algunos resultados obtenidos en varios de los experimentos realizados. Estos archivos sirven como ejemplo de las salidas esperadas al ejecutar el notebook.
 
 ## Métricas utilizadas
 
