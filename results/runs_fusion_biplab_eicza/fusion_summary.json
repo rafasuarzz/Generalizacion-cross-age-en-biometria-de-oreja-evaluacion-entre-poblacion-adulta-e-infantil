@@ -1,0 +1,48 @@
+{
+    "experiment_name": "BIPLab_to_EICZA_resnet18_mobilenetv3large_fusion",
+    "train_datasets": [
+        "BIPLab"
+    ],
+    "train_age_group": "adulto",
+    "test_datasets": [
+        "EICZA"
+    ],
+    "test_age_group": "niño",
+    "model_1": "resnet18",
+    "model_2": "mobilenet_v3_large",
+    "fusion_type": "concat_l2_normalized",
+    "embedding_dim_model_1": 512,
+    "embedding_dim_model_2": 512,
+    "embedding_dim_fusion": 1024,
+    "n_genuine_pairs": 3000,
+    "n_impostor_pairs": 3000,
+    "results": [
+        {
+            "model": "ResNet18",
+            "auc": 0.6860238333333333,
+            "eer": 0.3795,
+            "rank1": 0.11124510099487489,
+            "rank5": 0.19505577328911666,
+            "rank10": 0.25203497135966235,
+            "rank20": 0.3316249623153452
+        },
+        {
+            "model": "MobileNetV3Large",
+            "auc": 0.7418392222222222,
+            "eer": 0.3275,
+            "rank1": 0.11245100994874888,
+            "rank5": 0.2221887247512813,
+            "rank10": 0.29424178474525176,
+            "rank20": 0.4075972264094061
+        },
+        {
+            "model": "Fusion_ResNet18_MobileNetV3Large",
+            "auc": 0.7422244444444445,
+            "eer": 0.3298333333333333,
+            "rank1": 0.139282484172445,
+            "rank5": 0.24570394935182394,
+            "rank10": 0.31594814591498344,
+            "rank20": 0.4063913174555321
+        }
+    ]
+}
